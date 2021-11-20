@@ -1,0 +1,130 @@
+/*definisco aree per grid-layout*/
+.theUser{grid-area:user; 
+	text-align:right; font-size:90%; 
+	font-family:italic;
+	letter-spacing: 0.2px;}
+	
+.theHeader{grid-area:header; 
+	text-align:center; font-size:270%; 
+	font-family:"Georgia",sans-serif;
+	margin:12px;}
+	
+.theMenu{grid-area:menu; 
+	font-family: "Helvetica", "Arial", sans-serif; 
+	text-align:left; font-size:65%; line-height: 80%;
+	padding-right:10px; padding-left:10px;
+	margin:5px;
+	background-image:url("./img/wallpaper.jpg");
+	background-color:black;
+	opacity: 0.8; filter: alpha(opacity=80);
+	border-style:inset; border-color:white;}
+	
+.theContent{grid-area:main; 
+	text-align:justify; 
+	font-family:"Arial", "Helvetica", sans-serif;
+	background-color:black;
+	opacity: 0.75; filter: alpha(opacity=75);
+	margin:5px; padding:10px;}
+	
+.theFooter{grid-area:footer;
+	text-align:left; 
+	font-size:80%; font-style:italic; 
+	background-image:url("./img/wallpaper.jpg");
+	border-style:inset; border-color:Peru;
+	margin:5px; padding:10px;}
+
+/*definisco grid*/
+@media (min-width: 800px){
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+		"user user user user user user"
+		"header header header header header header"
+		"menu main main main main main"
+		"footer footer footer footer footer footer";
+		grid-gap: 3px;
+		margin: 15px;
+		padding:5px;
+		
+	}
+}
+
+/*comune a tutte le pagine*/
+#notactive{
+	color:Chocolate; 
+	font-style:italic;}
+	
+body{
+	color:white; 
+	background-image:url("./img/bg3.jpg"); }
+
+a{
+	color:BurlyWood;}
+	
+a:hover{
+	color:black; 
+	background-color:BurlyWood;}
+
+.right{
+	float:right;}
+
+/*pagina LIBRI*/
+table{ 
+	width: 100%; 
+	border-spacing: 5px 10px; 
+	border: 1px solid white;}
+	
+th{
+	color: black; 
+	background-color:Snow; 
+	font-size:125%;}
+	
+td.centro{
+	text-align:center; }
+
+.disponibile{
+	color:LawnGreen; 
+	font-weight:bold;}
+	
+.scaduto{
+	color:DarkOrange; 
+	font-weight:bold;}
+	
+.prestito{
+	color:yellow ; 
+	font-weight:bold;}
+
+/*pagina NEW*/
+.es{
+	color:Peru;}
+
+/*pagine di errore (ACCESSO, PRESTITO)*/
+.err{
+	color:red;}
+
+/*pagine di login/logout/msg errore/msg successo*/
+.userlogin{
+	color:orange; 
+	font-family:"Arial", sans-serif;}
+	
+p.mini{
+	font-size:80%;}
+
+.ciao{
+	color:Peru;}
+
+.icon{
+	float:left; 
+	width:10%; 
+	margin:10px;}
+
+.logout{
+	float:left; 
+	width:10%;} 
+	
+/*pagina HOME*/ 
+.center{
+	display: block; padding:1%;
+	margin-left: auto;  margin-right: auto; 
+	width:50%}
+	
